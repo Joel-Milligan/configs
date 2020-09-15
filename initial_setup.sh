@@ -6,7 +6,6 @@
 sudo apt update
 # Enter password
 sudo apt upgrade -y
-chsh --shell /bin/bash
 bash
 rm .bashrc .bash_logout .profile
 git clone https://github.com/Joel-Milligan/dotfiles.git

@@ -1,6 +1,7 @@
 *
 # Ignore all except the following:
 !.gitignore
+!initial_setup.sh
 
 # Bash Dotfiles
 !.bashrc

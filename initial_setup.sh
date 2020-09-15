@@ -12,4 +12,4 @@ shopt -s dotglob
 mv ~/dotfiles/* ~
 rmdir dotfiles
 source .bashrc
-reload
+echo "Completed Setup, may need to source .bashrc/restart"

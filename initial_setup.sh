@@ -6,11 +6,9 @@
 sudo apt update
 # Enter password
 sudo apt upgrade -y
-bash
 rm .bashrc .bash_logout .profile
 git clone https://github.com/Joel-Milligan/dotfiles.git
-shopt -s dotglob
-mv ~/dotfiles/* ~
+mv ~/dotfiles/.* ~
 rmdir dotfiles
 source .bashrc
 echo "Completed Setup, may need to source .bashrc/restart"

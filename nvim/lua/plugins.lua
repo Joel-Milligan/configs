@@ -12,11 +12,22 @@ return require('packer').startup(function(use)
 	}
 
 	-- Theme
-	use { 
-		"catppuccin/nvim", 
-		as = "catppuccin", 
-		config = function() 
+	use {
+		"catppuccin/nvim",
+		as = "catppuccin",
+		config = function()
 			vim.cmd('colorscheme catppuccin')
-		end 
+		end
+	}
+
+	-- Treesitter
+	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+	-- LSP
+	use {
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+		"hrsh7th/cmp-nvim-lsp",
 	}
 end)

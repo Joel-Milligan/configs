@@ -18,18 +18,12 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'" # List only directorie
 alias ls="command ls ${colorflag}" # Always use color output for `ls`
 alias grep='grep --color=auto'
 
-# Easier navigation
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
 
-# Enable aliases to be sudo’ed
-alias sudo='sudo '
-
-# Reload the shell (i.e. invoke as a login shell)
-alias reload="exec ${SHELL} -l"
-
-# Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
+alias sudo='sudo ' # Enable aliases to be sudo’ed
+alias reload="exec ${SHELL} -l" # Reload the shell (i.e. invoke as a login shell)
+alias path='echo -e ${PATH//:/\\n}' # Print each PATH entry on a separate line

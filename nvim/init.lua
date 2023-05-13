@@ -1,5 +1,1 @@
-require("plugins")
-require("remap")
-require("opts")
-require("treesitter")
-require("lsp")
+require("custom.options")

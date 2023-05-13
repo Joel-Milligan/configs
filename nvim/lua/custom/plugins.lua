@@ -29,6 +29,10 @@ return require('packer').startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 		"hrsh7th/cmp-nvim-lsp",
+<<<<<<< HEAD:nvim/lua/plugins.lua
 		"hrsh7th/nvim-cmp",
+=======
+		"hrsh7th/nvim-cmp"
+>>>>>>> 0217eaa (Start following LunarVim config):nvim/lua/custom/plugins.lua
 	}
 end)

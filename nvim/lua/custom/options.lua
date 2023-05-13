@@ -24,3 +24,4 @@ vim.opt.wrap = false                            -- display lines as one long lin
 vim.opt.scrolloff = 8                           -- minimum number of screen lines to keep above and below the cursor
 vim.opt.sidescrolloff = 8                       -- minimum number of columns to keep to the left and right of the cursor
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
+vim.opt.termguicolors = true                    -- enables the use of lots more colours

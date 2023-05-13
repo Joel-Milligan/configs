@@ -41,6 +41,7 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
+  use { "catppuccin/nvim", as = "catppuccin" } -- color scheme
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

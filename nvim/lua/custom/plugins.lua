@@ -40,12 +40,35 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use { "catppuccin/nvim", as = "catppuccin" } -- color scheme
+  -- package manager
+  use "wbthomason/packer.nvim"
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
+  -- colour scheme
+  use { "catppuccin/nvim", as = "catppuccin" }
+
+  -- cmp plugins
+  use "hrsh7th/nvim-cmp"    -- completion plugin
+  use "hrsh7th/cmp-buffer"  -- buffer completions
+  use "hrsh7th/cmp-path"    -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+
+  -- snippets
+  use "saadparwaiz1/cmp_luasnip"      -- snippet completions
+  use "l3mon4d3/luasnip"              -- snippet engine
+  use "rafamadriz/friendly-snippets"  -- a bunch of snippets to use
+
+  -- rust specific
+  use {
+    'saecki/crates.nvim',
+    tag = 'v0.3.0',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('crates').setup()
+    end,
+  }
+
+  -- automatically set up your configuration after cloning packer.nvim
+  if packer_bootstrap then
     require("packer").sync()
   end
 end)

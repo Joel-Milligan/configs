@@ -47,15 +47,22 @@ return packer.startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp"    -- completion plugin
-  use "hrsh7th/cmp-buffer"  -- buffer completions
-  use "hrsh7th/cmp-path"    -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "hrsh7th/nvim-cmp"     -- completion plugin
+  use "hrsh7th/cmp-buffer"   -- buffer completions
+  use "hrsh7th/cmp-path"     -- path completions
+  use "hrsh7th/cmp-cmdline"  -- cmdline completions
+  use "hrsh7th/cmp-nvim-lsp" -- lsp completions
 
   -- snippets
   use "saadparwaiz1/cmp_luasnip"      -- snippet completions
   use "l3mon4d3/luasnip"              -- snippet engine
   use "rafamadriz/friendly-snippets"  -- a bunch of snippets to use
+
+  -- lsp
+  use "neovim/nvim-lspconfig"
+  use { "williamboman/mason.nvim", run = ":MasonUpdate" }
+  use "williamboman/mason-lspconfig.nvim"
+  use "jose-elias-alvarez/null-ls.nvim" -- LSP diagnostics and code actions
 
   -- rust specific
   use {
@@ -68,7 +75,7 @@ return packer.startup(function(use)
   }
 
   -- automatically set up your configuration after cloning packer.nvim
-  if packer_bootstrap then
+  if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
 end)

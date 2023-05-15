@@ -77,10 +77,11 @@ cmp.setup {
     end,
   },
   sources = {
+    { name = "crates" },
+    { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
-    { name = "crates" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
